@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>オプション</title>
+</head>
+
+<body>
+  <h1>オプション</h1>
+  <label for="APIKey">API Key:</label>
+  <input type="text" id="APIKey" />
+  <br />
+  <label for="Model">モデル：</label>
+  <input type="text" id="Model" list="ModelList" />
+  <datalist id="ModelList">
+    <option value="gpt-3.5-turbo"></option>
+    <option value="gpt-4-turbo-preview"></option>
+  </datalist>
+  <br />
+  <button id="save">保存</button>
+  <span id="status"></span>
+  <script src="popup.js"></script>
+</body>
+
+</html>

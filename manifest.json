@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Problemo",
+    "version": "0.1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "./icons/Problemo.png",
+            "48": "./icons/Problemo.png",
+            "128": "./icons/Problemo.png"
+        }
+    },
+    "description": "任意の文章から文章問題を生成するAIアプリケーション",
+    "icons": {
+        "128": "./icons/Problemo.png"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://api.openai.com/v1/chat/completions"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "css": []
+        }
+    ]
+}
